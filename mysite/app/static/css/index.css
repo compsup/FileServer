@@ -1,0 +1,51 @@
+body {
+  text-align: center;
+  padding: 2em;
+  margin: 0;
+}
+table,
+th,
+td {
+  border: 1px solid;
+  padding: 10px;
+}
+table {
+  margin: 20px;
+}
+td {
+  background-color: gray;
+}
+.logout-link {
+  font-size: 25px;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+#user-greeting {
+  font-size: 35px;
+}
+#admin-panel-link {
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+}
+button {
+  margin: 50px;
+  padding: 5px;
+  background-color: rgb(26, 140, 185);
+}
+.media-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+.media-link:hover {
+  color: chartreuse;
+  text-decoration: underline;
+}
+caption {
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 10px;
+}
