@@ -7,7 +7,7 @@ from django.utils import timezone
 import datetime
 # Create your models here.
 USERS = (
-    ("admin", "admin"),
+    ("duncan", "duncan"),
     ("Greg", "Greg"),
 )
 
@@ -20,7 +20,7 @@ def generate_random_string(length):
 
 def directory_path(instance, filename):
 
-    # file will be uploaded to MEDIA_ROOT / random_string/<filename>
+    # file will be uploaded to media/random_string/<filename>
     return '{0}/{1}'.format(generate_random_string(16), filename)
 
 
