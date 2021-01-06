@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+  background-color: rgb(119, 119, 119);
+}
+h2 {
+  font-size: 3rem;
+  margin: 3rem;
+  color: white;
+}
+button {
+  margin: 1rem;
+  padding-top: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 3px;
+}
