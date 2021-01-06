@@ -8,8 +8,9 @@ class ViewsTestCase(TestCase):
         self.assertTemplateUsed(response, 'app/index.html')
 
     def test_login_view(self):
-        response = self.client.get('/accounts/login')
-        self.assertEqual(response.status_code, 301)
+        response = self.client.get('/accounts/login/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'registration/login.html')
 
     def test_admin_view(self):
 
