@@ -7,22 +7,27 @@ from django.utils import timezone
 import datetime
 # Create your models here.
 USERS = (
-    ("admin", "admin"),
+    ("duncan", "duncan"),
     ("Greg", "Greg"),
 )
 
 
 def generate_random_string(length):
-    global rand_string
     rand_string = ''.join(random.SystemRandom().choice(
         string.ascii_letters + string.digits) for i in range(length))
+    return rand_string
+
+
+def directory_path(instance, filename):
+
+    # file will be uploaded to media/random_string/<filename>
+    return '{0}/{1}'.format(generate_random_string(16), filename)
 
 
 class Files(models.Model):
-    generate_random_string(16)
     file_name = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
-    file = models.FileField(default='', upload_to=rand_string)
+    file = models.FileField(default='', upload_to=directory_path)
     public = models.BooleanField(default=False)
     uploaded_by = models.CharField(
         max_length=50, choices=USERS, default='None')
