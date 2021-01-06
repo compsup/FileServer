@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>hallo</title>
+    {% endblock %}
+</head>
+<body>
+    {% block navbar %}
+    <div>
+        <ul>
+            <li>Docs</li>
+            <li>GitHub</li>
+            <li>Information</li>
+        </ul>
+    </div>
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+    {% block footer %}
+    <div id="footer">
+        <div class="d-flex flex-row">
+            <div class="p-5">
+                <h4>Contact</h4>
+                <ul>
+                    <li class="p-2">GitHub</li>
+                    <li class="p-2">Discord</li>
+                </ul>
+            </div>
+            <div class="p-5">
+                <h4>Other Links</h4>
+                <ul>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                </ul>
+            </div>
+        </div>
+        <span >&copy; 2020 - Duncan McQuat</span>
+    </div>
+    {% endblock %}
+</body>
+</html>

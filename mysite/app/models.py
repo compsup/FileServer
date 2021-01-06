@@ -13,15 +13,13 @@ USERS = (
 
 
 def generate_random_string(length):
-    letters = string.ascii_lowercase
     global rand_string
-    rand_string = ''.join(random.choice(letters) for i in range(length))
-
-
-generate_random_string(16)
+    rand_string = ''.join(random.SystemRandom().choice(
+        string.ascii_letters + string.digits) for i in range(length))
 
 
 class Files(models.Model):
+    generate_random_string(16)
     file_name = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     file = models.FileField(default='', upload_to=rand_string)
