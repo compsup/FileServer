@@ -9,7 +9,7 @@ class ViewsTestCase(TestCase):
 
     def test_login_view(self):
         response = self.client.get('/accounts/login')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 301)
 
     def test_admin_view(self):
 
