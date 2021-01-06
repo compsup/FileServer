@@ -12,9 +12,8 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
 
 
-# @login_required()
 def index(request):
 
-    latest_file_list = Files.objects.order_by('-pub_date')[:10]
+    latest_file_list = Files.objects.order_by('-pub_date')[:20]
     context = {'latest_file_list': latest_file_list}
     return render(request, 'app/index.html', context)
