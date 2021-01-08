@@ -1,0 +1,59 @@
+.nav-item {
+  padding: 20px;
+}
+.navbar-nav {
+  list-style: none;
+}
+.nav-link {
+  font-size: 20px;
+  color: blueviolet;
+}
+.navbar {
+  background-color: gray;
+}
+#copyright {
+  background-blend-mode: lighten;
+  background-color: rgb(34, 34, 34);
+  width: 100%;
+  padding: 25px;
+  font-weight: bolder;
+}
+footer {
+  background-color: rgb(46, 46, 46);
+  text-align: center;
+  margin-top: 3rem;
+}
+#copyright span {
+  color: white;
+}
+footer h3 {
+  font-weight: bolder;
+  color: white;
+}
+.white-text {
+  color: white;
+}
+.font-weight-bold {
+  font-weight: bolder;
+}
+#footer-controls-container,
+#footer-controls-container li {
+  list-style-type: none;
+  text-align: center;
+  color: white;
+}
+.navbar-brand {
+  color: black;
+  font-size: 30px !important;
+}
+.navbar-brand:hover {
+  color: red;
+}
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+.nav-link:hover {
+  text-decoration: none;
+  color: blueviolet;
+}
