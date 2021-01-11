@@ -1,16 +1,3 @@
-.nav-item {
-  padding: 20px;
-}
-.navbar-nav {
-  list-style: none;
-}
-.nav-link {
-  font-size: 20px;
-  color: blueviolet;
-}
-.navbar {
-  background-color: gray;
-}
 #copyright {
   background-blend-mode: lighten;
   background-color: rgb(34, 34, 34);
@@ -42,18 +29,20 @@ footer h3 {
   text-align: center;
   color: white;
 }
-.navbar-brand {
-  color: black;
-  font-size: 30px !important;
-}
-.navbar-brand:hover {
-  color: red;
-}
-.nav-link {
-  text-decoration: none;
+/* nav-bar */
+.navbar-inverse .navbar-nav > li > a {
+  font-size: 20px;
   color: white;
 }
-.nav-link:hover {
-  text-decoration: none;
-  color: blueviolet;
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: red;
+}
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+.navbar-inverse {
+  background-color: rgb(61, 61, 61);
+}
+.navbar-nav > li {
+  border-left: 2px solid black;
 }

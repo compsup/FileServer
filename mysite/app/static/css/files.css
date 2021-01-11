@@ -1,0 +1,15 @@
+.table-container {
+  padding: 50px;
+}
+#content {
+}
+.table {
+  font-size: larger;
+}
+.title {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
+}

@@ -3,8 +3,7 @@ import random
 from django.contrib.auth.forms import AuthenticationForm
 from django import forms
 from django.db import models
-from django.utils import timezone
-import datetime
+from django.contrib.auth.models import User
 # Create your models here.
 USERS = (
     ("duncan", "duncan"),
@@ -21,6 +20,7 @@ def generate_random_string(length):
 def directory_path(instance, filename):
 
     # file will be uploaded to media/random_string/<filename>
+    # TODO Have seperate file folders for users.
     return '{0}/{1}'.format(generate_random_string(16), filename)
 
 
@@ -34,3 +34,15 @@ class Files(models.Model):
 
     def __str__(self):
         return '{}'.format(self.file_name)
+
+
+def get_user_information(user_name):
+    user = User.objects.get(username=user_name)
+    first_name = user.first_name
+    last_name = user.last_name
+    return '{0} {1}'
+
+
+class UserProfile(models.Model):
+    get_user_information('duncan')
+    username = models.CharField(max_length=200)
