@@ -8,8 +8,6 @@
     {% block header %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
     <title>Home | FileServer</title>
     {% endblock %}
 </head>
@@ -17,6 +15,9 @@
 <body>
     {% block content %}
     <div id="content">
+        <div class="alert alert-warning" role="alert">
+            <strong> Version 0.1.0-alpha | Warning! - </strong>This is a development version.
+        </div>
         <div>
             {% if user.is_authenticated %}
             <h3 id="user-greeting">Hi {{ user.username }}!</h3>
@@ -25,52 +26,7 @@
             <h2><a href='/accounts/login/'>Login</a></h2>
             {% endif %}
         </div>
-        {% if latest_file_list %}
-        <table class="table mx-auto" style="width:50%">
-            <caption>Public Files</caption>
-            <thead>
-                <tr>
-                    <th>Files</th>
-                    <th>Date Published</th>
-                    <th>Uploaded By</th>
-                </tr>
-            </thead>
-            {% for file in latest_file_list %}
-            {% if file.public %}
-            <tr>
-                <td><a href="media/{{ file.file }}/" target="_blank" class="media-link">{{ file.file_name }}</a></td>
-                <td>{{ file.pub_date }}</td>
-                <td>{{file.uploaded_by}}</td>
-            </tr>
-            {% endif %}
-            {% endfor %}
-        </table>
-        {% if user.is_authenticated %}
-        <table style="width:50%" class="table mx-auto">
-            <caption>Private Files</caption>
-            <thead>
-                <tr>
-                    <th>Files</th>
-                    <th>Date Published</th>
-                    <th>Uploaded By</th>
-                </tr>
-            </thead>
-            {% for file in latest_file_list %}
-            {% if not file.public %}
-            <tr>
-                <td><a href="media/{{ file.file }}/" target="_blank" class="media-link">{{ file.file_name }}</a></td>
-                <td>{{ file.pub_date }}</td>
-                <td>{{file.uploaded_by}}</td>
-            </tr>
-            {% endif %}
-            {% endfor %}
-        </table>
-        {% endif %}
-        {% else %}
-        <p>No files are available.</p>
-        {% endif %}
     </div>
-    <footer><button><a href="admin/" id="admin-panel-link">Administrator Panel</a></button></footer>
     {% endblock %}
 </body>
 

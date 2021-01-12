@@ -1,31 +1,47 @@
 import string
 import random
-from django.contrib.auth.forms import AuthenticationForm
-from django import forms
+import uuid
 from django.db import models
-from django.utils import timezone
-import datetime
+from django.contrib.auth.models import User
 # Create your models here.
-USERS = (
-    ("admin", "admin"),
-    ("Greg", "Greg"),
-)
+
+# Used to make random strings.
 
 
 def generate_random_string(length):
-    global rand_string
     rand_string = ''.join(random.SystemRandom().choice(
         string.ascii_letters + string.digits) for i in range(length))
+    return rand_string
+
+# Func to save a uploaded file to the correct path.
+
+
+def directory_path(instance, filename):
+
+    # file will be uploaded to media/random_string/<filename>
+    # TODO Have seperate file folders for users.
+    return '{0}/{1}'.format(generate_random_string(16), filename)
+
+# Model for uploading files.
 
 
 class Files(models.Model):
-    generate_random_string(16)
-    file_name = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
-    file = models.FileField(default='', upload_to=rand_string)
-    public = models.BooleanField(default=False)
-    uploaded_by = models.CharField(
-        max_length=50, choices=USERS, default='None')
+    file_name = models.CharField(max_length=50)
+    pub_date = models.DateTimeField(
+        'date published', auto_now_add=True, editable=False)
+    file = models.FileField(default='', upload_to=directory_path)
+    uploaded_by = models.ForeignKey(
+        User, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return '{}'.format(self.file_name)
+
+# Add-on to admin user profile.
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    about = models.TextField(max_length=1000, blank=True)
+    phone = models.CharField(max_length=15, blank=True, null=True)
+    uuid = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)

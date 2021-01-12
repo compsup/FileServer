@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends 'app/banner.html' %}
+    {% block header %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/files.css' %}">
+    <title>Files | FileServer</title>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <div id="content">
+        <div class="table-container container">
+            <h2 class='title'>Files</h2>
+            <div class="uploaded-files-tables well">
+                {% if latest_file_list %}
+                {% if user.is_authenticated %}
+                <table class="table">
+                    <caption>Private Files</caption>
+                    <thead>
+                        <tr>
+                            <th>File Name</th>
+                            <th>Date Published</th>
+                            <th>Uploaded By</th>
+                        </tr>
+                    </thead>
+                    {% for file in latest_file_list %}
+                    {% if not file.public %}
+                    <tr>
+                        <td><a href="media/{{ file.file }}/" target="_blank" class="media-link" download>{{ file.file_name }}</a></td>
+                        <td>{{ file.pub_date }}</td>
+                        <td>{{ file.uploaded_by }}</td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                </table>
+                {% endif %}
+                {% else %}
+                <p>No files are available.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

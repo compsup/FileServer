@@ -1,0 +1,52 @@
+#copyright {
+  background-blend-mode: lighten;
+  background-color: rgb(34, 34, 34);
+  width: 100%;
+  padding: 25px;
+  font-weight: bolder;
+}
+footer {
+  background-color: rgb(46, 46, 46);
+  text-align: center;
+  margin-top: 3rem;
+}
+#copyright span {
+  color: white;
+}
+footer h3 {
+  font-weight: bolder;
+  color: white;
+}
+.white-text {
+  color: white;
+}
+.font-weight-bold {
+  font-weight: bolder;
+}
+#footer-controls-container,
+#footer-controls-container li {
+  list-style-type: none;
+  text-align: center;
+  color: white;
+}
+/* nav-bar */
+.navbar-inverse .navbar-nav > li > a {
+  font-size: 20px;
+  color: white;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: rgba(255, 255, 255, 0.664);
+}
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+.navbar-inverse {
+  background-color: rgb(61, 61, 61);
+}
+.navbar-nav > li {
+  border-left: 2px solid black;
+}
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
