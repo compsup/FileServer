@@ -1,0 +1,24 @@
+.title {
+  text-align: center;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid gray;
+}
+.about {
+  margin-top: 10%;
+  padding: 20px;
+}
+#stats {
+}
+#content {
+  margin: 0;
+}
+.username-banner {
+  margin-bottom: 5rem;
+  padding: 5px;
+  text-align: center;
+  border-right: 1px solid;
+  border-left: 1px solid;
+}
+.username-banner > h1 {
+  font-weight: bolder;
+}

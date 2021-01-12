@@ -26,53 +26,6 @@
             <h2><a href='/accounts/login/'>Login</a></h2>
             {% endif %}
         </div>
-        <div class="uploaded-files-tables well">
-            {% if latest_file_list %}
-            <table class="table mx-auto uploaded-files" style="width:50%">
-                <caption>Public Files</caption>
-                <thead>
-                    <tr>
-                        <th>Files</th>
-                        <th>Date Published</th>
-                        <th>Uploaded By</th>
-                    </tr>
-                </thead>
-                {% for file in latest_file_list %}
-                {% if file.public %}
-                <tr>
-                    <td><a class="media-link" href="media/{{ file.file }}/">{{ file.file_name }}</a></td>
-                    <td>{{ file.pub_date }}</td>
-                    <td>{{file.uploaded_by}}</td>
-                </tr>
-                {% endif %}
-                {% endfor %}
-            </table>
-            {% if user.is_authenticated %}
-            <table style="width:50%" class="table mx-auto uploaded-files">
-                <caption>Private Files</caption>
-                <thead>
-                    <tr>
-                        <th>Files</th>
-                        <th>Date Published</th>
-                        <th>Uploaded By</th>
-                    </tr>
-                </thead>
-                {% for file in latest_file_list %}
-                {% if not file.public %}
-                <tr>
-                    <td><a href="media/{{ file.file }}/" target="_blank" class="media-link">{{ file.file_name }}</a></td>
-                    <td>{{ file.pub_date }}</td>
-                    <td>{{file.uploaded_by}}</td>
-                </tr>
-                {% endif %}
-                {% endfor %}
-            </table>
-            {% endif %}
-            {% else %}
-            <p>No files are available.</p>
-            {% endif %}
-        </div>
-        
     </div>
     {% endblock %}
 </body>
