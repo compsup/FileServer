@@ -8,13 +8,50 @@
     {% block header %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/user-profile.css' %}">
-    <title>User Profile | FileServer</title>
+    <title>{{ user.get_username }} | FileServer</title>
     {% endblock %}
 </head>
 
 <body>
     {% block content %}
-    
+    <div id="content">
+        <div class="username-banner">
+            <h1>{{ lookup_user.get_username }}</h1>
+        </div>
+        <div class="container">
+            <div id="stats">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3 class="title">Roles</h3>
+                        <div class="well">
+                            <p>Staff: {{ lookup_user.is_staff }}</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3 class="title">Information</h3>
+                        <div class="well">
+                            <p>Files Shared:</p>
+                            <p>Files Uploaded:</p>
+                            <p>Date Joined: {{ lookup_user.date_joined }}</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3 class="title">Contact</h3>
+                        <div class="well">
+                            <p>Email: {{ lookup_user.email }}</p>
+                            <p>Phone: {{ lookup_user.userprofile.phone }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="about">
+                <h3 class="title">About</h3>
+                <p class="well">{{ lookup_user.userprofile.about }}</p>
+            </div>
+        </div>
+    </div>
     {% endblock %}
 </body>
 

@@ -35,7 +35,7 @@ footer h3 {
   color: white;
 }
 .navbar-inverse .navbar-nav > li > a:hover {
-  color: red;
+  color: rgba(255, 255, 255, 0.664);
 }
 .navbar-inverse .navbar-brand {
   color: white;
@@ -45,4 +45,8 @@ footer h3 {
 }
 .navbar-nav > li {
   border-left: 2px solid black;
+}
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
 }
