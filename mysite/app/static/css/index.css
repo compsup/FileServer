@@ -1,5 +1,10 @@
-#footer {
-  text-align: center;
-  margin-top: 3rem;
-  border-top: 1px solid rgb(209, 209, 209);
+.uploaded-files-tables {
+  max-height: 800px;
+  overflow: auto;
+  margin: 50px;
+  padding: 10px;
+}
+.uploaded-files {
+  margin: auto;
+  margin-bottom: 60px;
 }

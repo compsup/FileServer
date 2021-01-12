@@ -3,42 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/banner.css' %}">
     {% block header %}
     <title>Banner Template</title>
     {% endblock %}
 </head>
 <body>
     {% block navbar %}
-    <div>
-        <ul>
-            <li>Docs</li>
-            <li>GitHub</li>
-            <li>Information</li>
+    <nav class="navbar navbar-expand-sm">
+        <a class="navbar-brand" href="#">FileServer</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link 3</a>
+            </li>
         </ul>
-    </div>
+    </nav>
     {% endblock %}
     {% block content %}
     {% endblock %}
     {% block footer %}
-    <div id="footer">
-        <div class="d-flex flex-row">
-            <div class="p-5">
-                <h4>Contact</h4>
+    <button><a href="admin/" id="admin-panel-link">Administrator Panel</a></button>
+    <footer>
+        <div class="container">
+            <div id="footer-controls-container">
+                <h1>Controls</h1>
                 <ul>
-                    <li class="p-2">GitHub</li>
-                    <li class="p-2">Discord</li>
-                </ul>
-            </div>
-            <div class="p-5">
-                <h4>Other Links</h4>
-                <ul>
-                    <li><a></a></li>
-                    <li><a></a></li>
+                    <li>Administrator Panel</li>
+                    <li>Settings</li>
                 </ul>
             </div>
         </div>
-        <span >&copy; 2020 - Duncan McQuat</span>
-    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Company Name</h3>
+                    <p class="white-text"> wd awd r grg rseeeeeeeeee ef ef </p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Get in touch</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item"><span class="font-weight-bold">></span> Discord</li>
+                        <li class="list-group-item"><span class="font-weight-bold">></span> GitHub</li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Development</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item"><span class="font-weight-bold">></span> GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="copyright">
+            <span>&copy; 2020 - Duncan McQuat</span>
+        </div>
+    </footer>
     {% endblock %}
 </body>
 </html>
