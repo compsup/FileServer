@@ -1,15 +1,31 @@
 .table-container {
   padding: 50px;
 }
-#content {
-}
 .table {
   font-size: larger;
 }
 .title {
   text-align: center;
-  font-size: 50px;
+  font-size: 3.9vw;
   margin-bottom: 25px;
   padding-bottom: 20px;
   border-bottom: 1px solid grey;
+}
+.upload > a {
+  padding: 16px;
+  float: right;
+  margin: 30px;
+  background-color: rgb(0, 172, 0);
+  border: 1px solid;
+  border-radius: 7px;
+  color: white;
+  color: white;
+  text-decoration: none;
+}
+.upload > a:hover {
+  opacity: 0.7;
+}
+html,
+body {
+  overflow-x: auto;
 }
