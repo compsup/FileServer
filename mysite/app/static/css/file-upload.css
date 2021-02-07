@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+form {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  max-width: 500px;
+  min-width: 300px;
+}
+label {
+  float: left;
+  margin-right: 15px;
+}
+input {
+}
+.inputs > p {
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#id_file {
+  margin: 10px;
+}
+h1 {
+  font-weight: bolder;
+  margin: 30px;
+}

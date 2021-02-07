@@ -6,17 +6,19 @@
     {% extends 'app/banner.html' %}
     {% block header %}
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/files.css' %}">
+    <link rel="stylesheet" href="{% static 'css/file-upload.css' %}">
     <title>Upload | FileServer</title>
     {% endblock %}
 </head>
 <body>
-    
     {% block content %}
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value=Submit>
+    <form enctype="multipart/form-data" action="" method="post">
+        <h1>Upload a File</h1>
+        <div class="inputs well">
+            {% csrf_token %}
+            {{ form.as_p }}
+        </div>
+        <input type="submit" value="Save" class="btn btn-success">
     </form>
     {% endblock %}
 </body>
