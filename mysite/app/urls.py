@@ -9,4 +9,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('files/', views.files, name='files'),
     path('user/<str:user_name>/', views.user_profile, name='user_profile'),
+    path('docs/', views.docs, name='docs'),
+    path('files/upload/', views.files_upload, name='files_upload'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
