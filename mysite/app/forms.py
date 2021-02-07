@@ -1,14 +1,11 @@
 # import form class from django
 from django import forms
 
-# import GeeksModel from models.py
+# import Files from models.py
 from .models import Files
 
-# create a ModelForm
 
-
-class GeeksForm(forms.ModelForm):
-    # specify the name of model to use
+class FileUploadForm(forms.ModelForm):
     class Meta:
         model = Files
         fields = "__all__"
