@@ -1,11 +1,10 @@
 body {
   text-align: center;
-  background-color: rgb(119, 119, 119);
 }
 h2 {
-  font-size: 3rem;
+  font-size: 50px;
   margin: 3rem;
-  color: white;
+  color: black;
 }
 button {
   margin: 1rem;
@@ -13,4 +12,14 @@ button {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 3px;
+}
+form {
+  padding: 2%;
+}
+#login-form {
+  width: 50%;
+  margin: auto;
+}
+label {
+  font-size: 20px;
 }

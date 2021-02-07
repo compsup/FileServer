@@ -1,0 +1,10 @@
+.section {
+  margin: 16px;
+  padding: 10px;
+  border-bottom: 2px solid rgb(0, 105, 44);
+  word-wrap: break-word;
+}
+.bash {
+  font-size: 14px;
+  font-weight: bolder;
+}

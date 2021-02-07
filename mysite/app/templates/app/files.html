@@ -30,7 +30,7 @@
                     {% for file in latest_file_list %}
                     {% if not file.public %}
                     <tr>
-                        <td><a href="media/{{ file.file }}/" target="_blank" class="media-link" download>{{ file.file_name }}</a></td>
+                        <td><a href="/media/{{ file.file }}/" target="_blank" class="media-link" download>{{ file.file_name }}</a></td>
                         <td>{{ file.pub_date }}</td>
                         <td>{{ file.uploaded_by }}</td>
                     </tr>

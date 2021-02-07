@@ -10,6 +10,7 @@
         crossorigin="anonymous"></script>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/banner.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
     {% block header %}
     <title>Banner Template</title>
     {% endblock %}
@@ -27,8 +28,14 @@
                 <li><a href="#">Docs</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
                 <li><a href="/user/{{ user.username }}">{{ user.username }}</a></li>
+                {% else %}
+                <li><a href="/accounts/login/">Login</a></li>
+                {% endif %}
+                {% if user.is_staff %}
                 <li><a href="/admin/">Admin</a></li>
+                {% endif %}
             </ul>
         </div>
     </nav>
@@ -40,14 +47,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <h3>Company Name</h3>
-                    <p class="white-text"> wd awd r grg rseeeeeeeeee ef ef </p>
+                    <h3>FileServer</h3>
+                    <p class="white-text"> FileServer is a fileserver, yay! </p>
                 </div>
                 <div class="col-sm-4">
                     <h3>Get in touch</h3>
                     <ul class="list-group">
                         <li class="list-group-item"><span class="font-weight-bold">></span> Discord</li>
-                        <li class="list-group-item"><span class="font-weight-bold">></span> GitHub</li>
                     </ul>
                 </div>
                 <div class="col-sm-4">

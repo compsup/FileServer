@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends 'app/banner.html' %}
+    {% block header %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/docs.css' %}">
+    <title>Documentation | FileServer</title>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+
+    <div class="doc-nav">
+    </div>
+    <div class="content">
+        <h1>FileServer Documentation</h1>
+        <div class="section" id="s-getting-started">
+            <span id="getting-started"></span>
+            <h2 class="section-title">
+                Getting Started
+            </h2>
+            <h3>Installation</h3>
+            <p>To start using FileServer you will need to create a <b>superuser</b> to manage the fileserver. First, navigate into the folder of your <code>manage.py</code>file</p>
+            <pre><span class="bash">$</span> python manage.py createsuperuser</pre>
+        </div>
+    </div>
+
+    {% endblock %}
+</body>

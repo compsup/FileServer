@@ -28,7 +28,7 @@ def directory_path(instance, filename):
 class Files(models.Model):
     file_name = models.CharField(max_length=50)
     pub_date = models.DateTimeField(
-        'date published', auto_now_add=True, editable=False)
+        'date published', null=True)
     file = models.FileField(default='', upload_to=directory_path)
     uploaded_by = models.ForeignKey(
         User, on_delete=models.CASCADE, null=True, blank=True)

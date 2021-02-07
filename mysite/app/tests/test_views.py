@@ -19,3 +19,8 @@ class ViewsTestCase(TestCase):
 
         response = self.client.get('/admin/login/?next=/admin/')
         self.assertEqual(response.status_code, 200)
+
+    def test_file_view(self):
+        # Test login redirect
+        response = self.client.get('/files/')
+        self.assertEqual(response.status_code, 302)

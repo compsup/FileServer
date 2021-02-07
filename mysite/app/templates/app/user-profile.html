@@ -48,7 +48,7 @@
         <div class="container">
             <div class="about">
                 <h3 class="title">About</h3>
-                <p class="well">{{ lookup_user.userprofile.about }}</p>
+                <p class="well">{{ lookup_user.userprofile.about|safe }}</p>
             </div>
         </div>
     </div>
