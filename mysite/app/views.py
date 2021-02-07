@@ -3,7 +3,7 @@ from .models import Files
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 from django.http import Http404
-from .forms import GeeksForm
+from .forms import FileUploadForm
 import datetime
 from django.http import HttpResponseRedirect
 # Create your views here.
@@ -31,13 +31,13 @@ def files_upload(request):
 
     # check if form data is valid
     if request.method == 'POST':
-        form = GeeksForm(request.POST, request.FILES)
+        form = FileUploadForm(request.POST, request.FILES)
         if form.is_valid():
             # file is saved
             form.save()
             return HttpResponseRedirect('/files/')
     else:
-        form = GeeksForm()
+        form = FileUploadForm()
 
     context['form'] = form
     return render(request, 'app/file-upload.html', context)
