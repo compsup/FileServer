@@ -42,13 +42,14 @@
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                             {% if user.is_authenticated %}
                             <li><a class="dropdown-item" href="/user/{{ user.username }}">Your Profile</a></li>
-                            {% else %}
-                            <li><a class="dropdown-item" href="/accounts/login/">Login</a></li>
-                            {% endif %}
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="/admin/logout/">Logout</a></li>
+                            {% else %}
+                            <li><a class="dropdown-item" href="/accounts/login/">Login</a></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Help</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            {% endif %}
                         </ul>
                     </li>
                 </ul>
@@ -64,7 +65,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <h3>FileServer</h3>
-                    <p class="white-text"> FileServer is a fileserver, yay! </p>
+                    <p class="white-text">FileServer is a fileserver.</p>
                 </div>
                 <div class="col-sm-4">
                     <h3>Get in touch</h3>

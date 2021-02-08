@@ -3,6 +3,8 @@ body {
   text-align: center;
 }
 form {
+  padding: 40px;
+  border: 10px dotted rgb(0, 83, 76);
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
@@ -11,10 +13,12 @@ form {
   min-width: 300px;
 }
 label {
+  color: white;
   float: left;
   margin-right: 15px;
 }
 input {
+  color: white;
 }
 .inputs > p {
   text-align: left;
@@ -27,4 +31,5 @@ input {
 h1 {
   font-weight: bolder;
   margin: 30px;
+  color: white;
 }

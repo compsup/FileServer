@@ -22,13 +22,13 @@
             <div id="stats">
                 <div class="row">
                     <div class="col-sm-4">
-                        <h3 class="title">Roles</h3>
+                        <h3 class="heading">Roles</h3>
                         <div class="well">
                             <p>Staff: {{ lookup_user.is_staff }}</p>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <h3 class="title">Information</h3>
+                        <h3 class="heading">Information</h3>
                         <div class="well">
                             <p>Files Shared:</p>
                             <p>Files Uploaded:</p>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <h3 class="title">Contact</h3>
+                        <h3 class="heading">Contact</h3>
                         <div class="well">
                             <p>Email: {{ lookup_user.email }}</p>
                             <p>Phone: {{ lookup_user.userprofile.phone }}</p>
@@ -47,7 +47,7 @@
         </div>
         <div class="container">
             <div class="about">
-                <h3 class="title">About</h3>
+                <h3 class="heading">About</h3>
                 <p class="well">{{ lookup_user.userprofile.about|safe }}</p>
             </div>
         </div>
