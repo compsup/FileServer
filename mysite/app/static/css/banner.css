@@ -29,23 +29,22 @@ footer h3 {
   color: white;
 }
 /* nav-bar */
-.navbar-inverse .navbar-nav > li > a {
-  font-size: 20px;
-  color: white;
-}
-.navbar-inverse .navbar-nav > li > a:hover {
-  color: rgba(255, 255, 255, 0.664);
-}
-.navbar-inverse .navbar-brand {
-  color: white;
-}
-.navbar-inverse {
-  background-color: rgb(61, 61, 61);
-}
-.navbar-nav > li {
-  border-left: 2px solid black;
-}
 .navbar {
+  background-color: rgb(49, 49, 49);
   margin-bottom: 0;
   border-radius: 0;
+}
+.navbar a {
+}
+.nav-item > a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+.nav-item:hover {
+  opacity: 0.7;
+  background-color: rgb(61, 61, 61);
+}
+.navbar-brand {
+  font-size: 24px;
 }
