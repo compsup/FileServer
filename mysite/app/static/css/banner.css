@@ -1,8 +1,7 @@
-html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  background: rgb(16, 16, 26);
 }
 #copyright {
   background-blend-mode: lighten;
@@ -14,6 +13,9 @@ body {
 footer {
   background-color: rgb(46, 46, 46);
   text-align: center;
+}
+.footer-container {
+  padding: 40px;
 }
 #copyright span {
   color: white;
@@ -33,6 +35,9 @@ footer h3 {
   list-style-type: none;
   text-align: center;
   color: white;
+}
+.list-group {
+  color: black;
 }
 /* nav-bar */
 .navbar {

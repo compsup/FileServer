@@ -16,13 +16,12 @@
         <div class="upload">
             <a href="/files/upload/" class="">Upload Files</a>
         </div>
-        <div class="table-container container">
+        <div class="table-container container-md">
             <h2 class='title'>Files</h2>
-            <div class="uploaded-files-tables well">
+            <div class="uploaded-files-table table-responsive-md">
                 {% if latest_file_list %}
                 {% if user.is_authenticated %}
-                <table class="table">
-                    <caption>Private Files</caption>
+                <table class="table table-dark table-striped table-hover">
                     <thead>
                         <tr>
                             <th>File Name</th>
@@ -31,13 +30,11 @@
                         </tr>
                     </thead>
                     {% for file in latest_file_list %}
-                    {% if not file.public %}
                     <tr>
                         <td><a href="/media/{{ file.file }}/" target="_blank" class="media-link" download>{{ file.file_name }}</a></td>
                         <td>{{ file.pub_date }}</td>
                         <td>{{ file.uploaded_by }}</td>
                     </tr>
-                    {% endif %}
                     {% endfor %}
                 </table>
                 {% endif %}

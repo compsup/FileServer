@@ -1,4 +1,7 @@
-.title {
+body {
+  color: white;
+}
+.heading {
   text-align: center;
   padding-bottom: 3rem;
   border-bottom: 2px solid gray;
@@ -7,17 +10,11 @@
   margin-top: 10%;
   padding: 20px;
 }
-#stats {
-}
-#content {
-  margin: 0;
-}
 .username-banner {
   margin-bottom: 5rem;
-  padding: 5px;
+  margin-top: 3rem;
+  padding: 10px;
   text-align: center;
-  border-right: 1px solid;
-  border-left: 1px solid;
 }
 .username-banner > h1 {
   font-weight: bolder;
