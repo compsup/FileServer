@@ -1,5 +1,5 @@
 # FileServer
-
+![Django CI](https://github.com/compsup/FileServer/workflows/Django%20CI/badge.svg)
 ## Features
 
 - Randomly generated folders per file
