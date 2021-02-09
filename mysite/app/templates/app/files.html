@@ -14,7 +14,7 @@
     {% block content %}
     <div id="content">
         <div class="upload">
-            <a href="/files/upload/" class="">Upload Files</a>
+            <a href="/files/upload/" class="btn btn-success">Upload Files</a>
         </div>
         <div class="table-container container-md">
             <h2 class='title'>Files</h2>
@@ -33,7 +33,7 @@
                     <tr>
                         <td><a href="/media/{{ file.file }}/" target="_blank" class="media-link" download>{{ file.file_name }}</a></td>
                         <td>{{ file.pub_date }}</td>
-                        <td>{{ file.uploaded_by }}</td>
+                        <td><a href="/user/{{ file.uploaded_by }}/">{{ file.uploaded_by }}</a></td>
                     </tr>
                     {% endfor %}
                 </table>
