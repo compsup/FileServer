@@ -31,7 +31,7 @@ class Files(models.Model):
         'date published', blank=True, null=True, auto_now_add=True)
     file = models.FileField(default='', upload_to=directory_path)
     uploaded_by = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=True, blank=True)
+        User, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return '{}'.format(self.file_name)
@@ -41,7 +41,7 @@ class Files(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    about = models.TextField(max_length=1000, blank=True)
+    about = models.TextField(max_length=1000, blank=True, null=True)
     phone = models.CharField(max_length=15, blank=True, null=True)
     uuid = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False)

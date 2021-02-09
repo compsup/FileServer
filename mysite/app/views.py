@@ -4,7 +4,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 from django.http import Http404
 from .forms import FileUploadForm
-import datetime
 from django.http import HttpResponseRedirect
 # Create your views here.
 
@@ -20,9 +19,11 @@ def index(request):
 @login_required
 def files(request):
 
-    latest_file_list = Files.objects.order_by('-pub_date')[:20]
+    latest_file_list = Files.objects.order_by('-pub_date')[:100]
     context = {'latest_file_list': latest_file_list}
     return render(request, 'app/files.html', context)
+
+# File Upload
 
 
 @login_required
@@ -41,8 +42,9 @@ def files_upload(request):
 
     context['form'] = form
     return render(request, 'app/file-upload.html', context)
-# User Profiles
 
+
+# User Profiles
 
 @login_required
 def user_profile(request, user_name):
@@ -52,7 +54,7 @@ def user_profile(request, user_name):
         lookup_user = User.objects.get(username=user_name)
     except User.DoesNotExist:
         raise Http404("User does not exist!")
-    context = {'lookup_user': lookup_user, 'user_list': user_list}
+    context = {'lookup_user': lookup_user}
     return render(request, 'app/user-profile.html', context)
 
 
