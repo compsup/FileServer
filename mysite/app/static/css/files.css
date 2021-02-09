@@ -40,3 +40,6 @@ table th {
   position: sticky;
   top: 0px;
 }
+th {
+  background-color: rgb(255, 0, 0);
+}

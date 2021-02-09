@@ -22,4 +22,11 @@ form {
 }
 label {
   font-size: 20px;
+  color: white;
+}
+h2 {
+  color: white;
+}
+input {
+  border-radius: 6px;
 }
