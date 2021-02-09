@@ -36,7 +36,7 @@ def files_upload(request):
         if form.is_valid():
             # file is saved
             form.save()
-            return HttpResponseRedirect('/files/')
+            return HttpResponseRedirect('/files/upload-success/')
     else:
         form = FileUploadForm()
 
@@ -44,7 +44,11 @@ def files_upload(request):
     return render(request, 'app/file-upload.html', context)
 
 
+@login_required
+def files_upload_success(request):
+    return render(request, 'app/upload-success.html')
 # User Profiles
+
 
 @login_required
 def user_profile(request, user_name):

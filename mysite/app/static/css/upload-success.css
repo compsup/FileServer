@@ -1,0 +1,12 @@
+h2 {
+  color: white;
+}
+body {
+  text-align: center;
+}
+.content {
+  padding: 5%;
+}
+.content > a {
+  margin: 20px;
+}
