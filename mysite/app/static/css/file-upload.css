@@ -27,9 +27,17 @@ input {
 }
 #id_file {
   margin: 10px;
+  padding: 10px;
+  border: 3px dotted rgb(0, 168, 168);
 }
 h1 {
   font-weight: bolder;
   margin: 30px;
   color: white;
+}
+.errorlist {
+  color: white;
+}
+#id_file_name {
+  color: black;
 }
