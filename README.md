@@ -2,6 +2,13 @@
 
 ## Features
 
-## Notes
+- Randomly generated folders per file
+- Full user authentication system
+- User profiles
+- File Table to view files
 
-- The main branch is not complete & stable, do not use in production!
+## Contact
+
+### Discord
+
+https://discord.gg/xKjXDwWyfk
