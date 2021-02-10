@@ -1,11 +1,38 @@
-# FileServer
-![Django CI](https://github.com/compsup/FileServer/workflows/Django%20CI/badge.svg)
-## Features
+# FileServer ![Django CI](https://github.com/compsup/FileServer/workflows/Django%20CI/badge.svg)
+
+A http/https fileserver where you can upload files and download files. Written using [Django](https://www.djangoproject.com/). Free and Open-Source forever!
+
+# Table of Contents
+
+- [Information](#information)
+
+- [Features](#features)
+
+- [Technologies](#technologies)
+
+- [Contact](#contact)
+
+# Information
+
+I made this project to solve the problem of there being no good free and open-source website fileserver. There's storage things like OneDrive but they are not open-source and also require money after you used up the free space. This program aims to be secure, reliable, and free forever.
+
+# Features
 
 - Randomly generated folders per file
 - Full user authentication system
 - User profiles
 - File Table to view files
+
+### ToDo
+
+- Easily delete files from files view
+- Add a settings page for users
+- Have a page where its shows only what certain users uploaded.
+
+# Technologies
+
+- [BootStrap](https://getbootstrap.com/) 5
+- [Django](https://www.djangoproject.com/) 3.1.5
 
 ## Contact
 
