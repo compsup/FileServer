@@ -56,3 +56,6 @@ footer h3 {
 .navbar-brand {
   font-size: 24px;
 }
+.list-group > .list-group-item > a {
+  text-decoration: none;
+}

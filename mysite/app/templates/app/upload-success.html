@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends 'app/banner.html' %}
+    {% block header %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/upload-success.css' %}">
+    <title>Upload | FileServer</title>
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="content">
+        <h2>The file has been successfully uploaded!</h2>
+        
+        <a class="btn btn-success" href="/files/">View Files</a>
+        <a class="btn btn-success" href="/files/upload/">Upload another file</a>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

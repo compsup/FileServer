@@ -1,7 +1,14 @@
 # FileServer
-
+![Django CI](https://github.com/compsup/FileServer/workflows/Django%20CI/badge.svg)
 ## Features
 
-## Notes
+- Randomly generated folders per file
+- Full user authentication system
+- User profiles
+- File Table to view files
 
-- The main branch is not complete & stable, do not use in production!
+## Contact
+
+### Discord
+
+https://discord.gg/xKjXDwWyfk
