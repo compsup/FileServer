@@ -36,9 +36,7 @@ I made this project to solve the problem of there being no good free and open-so
 
 ## Contact
 
-### Discord
-
-https://discord.gg/xKjXDwWyfk
+- [Discord](https://discord.gg/xKjXDwWyfk)
 
 ## Preview
 
