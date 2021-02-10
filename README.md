@@ -12,3 +12,7 @@
 ### Discord
 
 https://discord.gg/xKjXDwWyfk
+
+## Preview
+
+![Screenshot](https://github.com/compsup/FileServer/blob/main/screenshots/Screenshot%20from%202021-02-09%2020-30-16.png)
