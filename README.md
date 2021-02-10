@@ -1,4 +1,4 @@
-# FileServer ![Django CI](https://github.com/compsup/FileServer/workflows/Django%20CI/badge.svg)
+# FileServer ![Django CI](https://github.com/compsup/FileServer/workflows/Django%20CI/badge.svg) ![CodeQL](https://github.com/compsup/FileServer/workflows/CodeQL/badge.svg?branch=main)
 
 A http/https fileserver where you can upload files and download files. Written using [Django](https://www.djangoproject.com/). Free and Open-Source forever!
 
