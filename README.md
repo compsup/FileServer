@@ -15,4 +15,4 @@ https://discord.gg/xKjXDwWyfk
 
 ## Preview
 
-![Screenshot](screenshots/Screenshot from 2021-02-09 20-30-16.png)
+![Screenshot](https://github.com/github/FileServer/blob/screenshots/Screenshot from 2021-02-09 20-30-16.png)
