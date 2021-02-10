@@ -40,4 +40,6 @@ I made this project to solve the problem of there being no good free and open-so
 
 ## Preview
 
+#### File Upload Page
+
 ![Screenshot](https://github.com/compsup/FileServer/blob/main/screenshots/Screenshot%20from%202021-02-09%2020-30-16.png)
