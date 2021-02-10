@@ -2,6 +2,8 @@
 
 A http/https fileserver where you can upload files and download files. Written using [Django](https://www.djangoproject.com/). Free and Open-Source forever!
 
+For setting up the server please refer to [The Wiki](https://github.com/compsup/FileServer/wiki).
+
 # Table of Contents
 
 - [Information](#information)
