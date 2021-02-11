@@ -1,7 +1,6 @@
 # FileServer   
 ![Django CI](https://github.com/compsup/FileServer/workflows/Django%20CI/badge.svg)
 ![GitHub](https://img.shields.io/github/license/compsup/FileServer)
-![CodeQL](https://github.com/compsup/FileServer/workflows/CodeQL/badge.svg?branch=main)
 ![Docker Pulls](https://img.shields.io/docker/pulls/compsup/fileserver)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/compsup/FileServer)
 
