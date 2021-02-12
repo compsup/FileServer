@@ -41,3 +41,7 @@ h1 {
 #id_file_name {
   color: black;
 }
+.back {
+  margin: 20px;
+  float: left;
+}
