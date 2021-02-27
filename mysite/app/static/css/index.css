@@ -1,1 +1,22 @@
-
+#title-div {
+  margin: 5%;
+  text-align: center;
+  color: rgb(233, 233, 233);
+}
+#title-div > p {
+  padding-left: 20px;
+}
+#content {
+  text-align: center;
+  color: rgb(221, 221, 221);
+}
+.header-content {
+  padding: 50px;
+  border-top: 1px solid rgb(173, 173, 173);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-content > h2 {
+  padding-bottom: 20px;
+}
